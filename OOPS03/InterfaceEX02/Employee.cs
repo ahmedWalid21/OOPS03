@@ -20,7 +20,10 @@ namespace OOPS03.InterfaceEX02
 
         public int CompareTo(object? obj)
         {
-            throw new NotImplementedException();
+            Employee e=(Employee)obj;
+            if (this.Age > e.Age) return 234;
+            else if (this.Age < e.Age) return -23;
+            else return 0;
         }
 
         public override string ToString()

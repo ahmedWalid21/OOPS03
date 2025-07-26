@@ -108,9 +108,9 @@ namespace OOPS03
             //arr2[0] = 100;
             //Console.WriteLine(arr1[0]);
 
-            Employee e = new Employee() { Id = 1, Name = "Ahmed", Age = 23, Salary = 12000 };
-            Employee e2 = new Employee() { Id = 2, Name = "Ali", Age = 34, Salary = 11000 };
-          
+           // Employee e = new Employee() { Id = 1, Name = "Ahmed", Age = 23, Salary = 12000 };
+           // Employee e2 = new Employee() { Id = 2, Name = "Ali", Age = 34, Salary = 11000 };
+
             //e2 = e;
             //Console.WriteLine(e.GetHashCode());
             //Console.WriteLine(e2.GetHashCode());
@@ -118,11 +118,29 @@ namespace OOPS03
             //Console.WriteLine(e2);
 
 
-            e2 = (Employee)e.Clone();
-            Console.WriteLine(e.GetHashCode());
-            Console.WriteLine(e2.GetHashCode());
-            Console.WriteLine(e);
-            Console.WriteLine(e2);
+            //e2 = (Employee)e.Clone();
+            //Console.WriteLine(e.GetHashCode());
+            //Console.WriteLine(e2.GetHashCode());
+            //Console.WriteLine(e);
+            //Console.WriteLine(e2);
+
+            Employee[] e = new Employee[3]
+            {
+                new Employee(){Id=1, Name="Ahmed", Age=23, Salary=12000},
+                new Employee(){Id=2, Name="Ali", Age=33, Salary=11000},
+                new Employee(){Id=3, Name="Omar", Age=43, Salary=13000}
+
+            };
+
+          ///  int x = e[0].CompareTo(e[1]);
+          //  Console.WriteLine(x);
+            Array.Sort(e);
+            foreach (Employee item in e)
+           {
+                Console.WriteLine(item);
+            }
+
+
         }
     }
 }

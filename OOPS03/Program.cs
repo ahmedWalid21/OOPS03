@@ -76,11 +76,38 @@ namespace OOPS03
             //    Console.WriteLine(item);   
             //}
 
-            Airplane a=new Airplane();
-            IMovable i = a;
-            i.forward();
-            IFlyable f = a;
-            f.forward();
+            //Airplane a=new Airplane();
+            //IMovable i = a;
+            //i.forward();
+            //IFlyable f = a;
+            //f.forward();
+
+            //Shallow copy and Deep copy
+
+            //int[] arr1 = { 1, 2, 3 };
+            //int[] arr2 = { 4, 5, 6 };
+            //Console.WriteLine($"Arr1: {arr1.GetHashCode()}");
+            //Console.WriteLine($"arr2: {arr2.GetHashCode()}");
+            //arr2 = arr1;//Shallow copy
+            //Console.WriteLine();
+            //Console.WriteLine($"Arr1: {arr1.GetHashCode()}");
+            //Console.WriteLine($"arr2: {arr2.GetHashCode()}");
+
+            //arr2[0] = 100;
+            //Console.WriteLine(arr1[0]);
+
+            int[] arr1 = { 1, 2, 3 };
+            int[] arr2 = { 4, 5, 6 };
+            Console.WriteLine($"Arr1: {arr1.GetHashCode()}");
+            Console.WriteLine($"arr2: {arr2.GetHashCode()}");
+            arr2 =(int[] )arr1.Clone();//Deep copy
+            Console.WriteLine();
+            Console.WriteLine($"Arr1: {arr1.GetHashCode()}");
+            Console.WriteLine($"arr2: {arr2.GetHashCode()}");
+
+            arr2[0] = 100;
+            Console.WriteLine(arr1[0]);
+
 
 
         }

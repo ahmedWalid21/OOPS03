@@ -1,9 +1,21 @@
-﻿using OOPS03.InterfaceEX01;
+﻿using System.Collections;
+using OOPS03.InterfaceEX01;
 using OOPS03.InterfaceEX02;
 using OOPS03.InterfaceEX03;
 
 namespace OOPS03
 {
+    class EmployeeCompareSalary : IComparer
+    {
+        public int compare(object ?x, object? y)
+        {
+            Employee X = (Employee)x;
+            Employee Y = (Employee)y;
+            if (X.Salary > Y.Salary) return 1;
+            else if (X.Salary < Y.Salary) return -1;
+            return 0;
+        }
+    }
     internal class Program
     {
         //static void print10number(SeriesByTwo s)
@@ -134,7 +146,7 @@ namespace OOPS03
 
           ///  int x = e[0].CompareTo(e[1]);
           //  Console.WriteLine(x);
-            Array.Sort(e);
+            Array.Sort(e, new EmployeeCompareSalary());
             foreach (Employee item in e)
            {
                 Console.WriteLine(item);

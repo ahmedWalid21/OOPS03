@@ -13,6 +13,11 @@ namespace OOPS03.InterfaceEX02
         public int Age { get; set; }
        public double Salary {  get; set; }
 
+        public int CompareTo(object? obj)
+        {
+            throw new NotImplementedException();
+        }
+
         public override string ToString()
         {
             return $"Id: {Id}, Name{Name}, Age: {Age}, Salary: {Salary}";

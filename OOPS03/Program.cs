@@ -1,5 +1,6 @@
 ﻿using OOPS03.InterfaceEX01;
 using OOPS03.InterfaceEX02;
+using OOPS03.InterfaceEX03;
 
 namespace OOPS03
 {
@@ -62,18 +63,24 @@ namespace OOPS03
             // print10number(t)
 
 
-            Employee[] e = new Employee[3]
-            {
-                new Employee(){Id=1, Name="Ahmed", Age=23, Salary=12000},
-                new Employee(){Id=2, Name="Ali", Age=33, Salary=11000},
-                new Employee(){Id=3, Name="Omar", Age=43, Salary=13000}
+            //Employee[] e = new Employee[3]
+            //{
+            //    new Employee(){Id=1, Name="Ahmed", Age=23, Salary=12000},
+            //    new Employee(){Id=2, Name="Ali", Age=33, Salary=11000},
+            //    new Employee(){Id=3, Name="Omar", Age=43, Salary=13000}
 
-            };
-            Array.Sort(e);
-            foreach(Employee item in e)
-            {
-                Console.WriteLine(item);   
-            }
+            //};
+            //Array.Sort(e);
+            //foreach(Employee item in e)
+            //{
+            //    Console.WriteLine(item);   
+            //}
+
+            Airplane a=new Airplane();
+            IMovable i = a;
+            i.forward();
+            IFlyable f = a;
+            f.forward();
 
 
         }

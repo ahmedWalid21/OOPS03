@@ -96,20 +96,33 @@ namespace OOPS03
             //arr2[0] = 100;
             //Console.WriteLine(arr1[0]);
 
-            int[] arr1 = { 1, 2, 3 };
-            int[] arr2 = { 4, 5, 6 };
-            Console.WriteLine($"Arr1: {arr1.GetHashCode()}");
-            Console.WriteLine($"arr2: {arr2.GetHashCode()}");
-            arr2 =(int[] )arr1.Clone();//Deep copy
-            Console.WriteLine();
-            Console.WriteLine($"Arr1: {arr1.GetHashCode()}");
-            Console.WriteLine($"arr2: {arr2.GetHashCode()}");
+            //int[] arr1 = { 1, 2, 3 };
+            //int[] arr2 = { 4, 5, 6 };
+            //Console.WriteLine($"Arr1: {arr1.GetHashCode()}");
+            //Console.WriteLine($"arr2: {arr2.GetHashCode()}");
+            //arr2 =(int[] )arr1.Clone();//Deep copy
+            //Console.WriteLine();
+            //Console.WriteLine($"Arr1: {arr1.GetHashCode()}");
+            //Console.WriteLine($"arr2: {arr2.GetHashCode()}");
 
-            arr2[0] = 100;
-            Console.WriteLine(arr1[0]);
+            //arr2[0] = 100;
+            //Console.WriteLine(arr1[0]);
+
+            Employee e = new Employee() { Id = 1, Name = "Ahmed", Age = 23, Salary = 12000 };
+            Employee e2 = new Employee() { Id = 2, Name = "Ali", Age = 34, Salary = 11000 };
+          
+            //e2 = e;
+            //Console.WriteLine(e.GetHashCode());
+            //Console.WriteLine(e2.GetHashCode());
+            //Console.WriteLine(e);
+            //Console.WriteLine(e2);
 
 
-
+            e2 = (Employee)e.Clone();
+            Console.WriteLine(e.GetHashCode());
+            Console.WriteLine(e2.GetHashCode());
+            Console.WriteLine(e);
+            Console.WriteLine(e2);
         }
     }
 }
